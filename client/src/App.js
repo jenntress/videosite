@@ -10,8 +10,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.props.children :
-        <h1>...Loading</h1>}
+        {this.props.children}
       </div>
     )
   }
