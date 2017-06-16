@@ -1,6 +1,6 @@
 
-import React, { Component } from 'react';
-import $ from 'jquery';
+import React, { Component} from 'react';
+
 
 
 class App extends Component {
@@ -10,7 +10,8 @@ class App extends Component {
   render() {
     return (
       <div>
-      <h1>Hi from the App.js!</h1>
+        {this.props.children :
+        <h1>...Loading</h1>}
       </div>
     )
   }
