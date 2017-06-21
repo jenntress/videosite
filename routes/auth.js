@@ -1,4 +1,4 @@
-// blog/routes/auth.js
+
 
 const User = require('../models/user');
 
