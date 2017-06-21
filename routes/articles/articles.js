@@ -1,4 +1,3 @@
-//  blog/routes/articles/articles.js       (sample at routes/superheroes.js )
 
 var Article = require('../../models/article');
 var Comment = require('../../models/comment');
