@@ -6,6 +6,8 @@ var CourseSchema = new mongoose.Schema({
 	dateCreated: Date,
 	description: String,
 	published: Boolean,
+	lessons: [{type: mongoose.Schema.Types.ObjectId, 
+				ref: 'Lesson'}]
 }); 
 
 CourseSchema.methods.loadData = function(data){

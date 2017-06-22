@@ -13,6 +13,7 @@ exports.createCourse = (req, res) => {
 //******GET****** exporting this out to our index
 exports.getAll = (req, res) => {
 	Course.find()
+      .populate('lessons')
 		  .exec((err, data) => {
 		  	if (err) throw err;
 		  	res.send({data})
@@ -21,6 +22,7 @@ exports.getAll = (req, res) => {
 
 exports.getById = (req, res) => {
 	Course.findById(req.params.course_id)
+      .populate('lessons')
 		  .exec((err, data) => {
 		  	if(err) throw err;
 		  		res.send({data: data, message: "Found your course!"})
@@ -55,4 +57,5 @@ exports.removeCourse = (req, res) => {
     }
   });
 };
+
 

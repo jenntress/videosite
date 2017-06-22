@@ -12,7 +12,7 @@ module.exports = (app) => {
 	app.put('/api/courses/:course_id', CourseRoutes.updateCourse);
 	app.delete('/api/courses/:course_id', CourseRoutes.removeCourse);
 
-	app.post('/api/lessons', LessonRoutes.createLesson);
+	app.post('/api/lessons/:course_id', LessonRoutes.createLesson);
 	app.get('/api/lessons', LessonRoutes.getAll);
 	app.get('/api/lessons/:lesson_id', LessonRoutes.getById);
 	app.put('/api/lessons/:lesson_id', LessonRoutes.updateLesson);
