@@ -2,7 +2,6 @@ const Lesson = require('../../models/lesson');
 const Course = require('../../models/course');
 
 //****** POST ********
-
 //route JUST for posting lessons to a course. GET a specific course. POST a lesson. POST new lesson to course.
 exports.createLesson = (req, res) => {
   Course.findById(req.params.course_id, (err, course) => {

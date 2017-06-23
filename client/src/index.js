@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
-import {HomeContainer} from './containers';
+import {HomeContainer, AboutContainer} from './containers';
 require('bootstrap/dist/css/bootstrap.css'); // need to call here AND in public/index.html
 
 
@@ -13,7 +13,8 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={HomeContainer} />
-      <Route path="/home" component={HomeContainer}/>
+      <Route path="/home" component={HomeContainer} />
+      <Route path="/about" component={AboutContainer} />
     </Route>
   </Router>,
   document.getElementById('root')
