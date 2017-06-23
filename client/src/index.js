@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
-import {HomeContainer, AboutContainer} from './containers';
+import {HomeContainer, AboutContainer, SignUpContainer} from './containers';
 require('bootstrap/dist/css/bootstrap.css'); // need to call here AND in public/index.html
 
 
@@ -15,6 +15,7 @@ ReactDOM.render(
       <IndexRoute component={HomeContainer} />
       <Route path="/home" component={HomeContainer} />
       <Route path="/about" component={AboutContainer} />
+      <Route path="/signup" component={SignUpContainer} />
     </Route>
   </Router>,
   document.getElementById('root')
