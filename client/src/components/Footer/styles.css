@@ -1,0 +1,18 @@
+
+.footerBox {
+  background-color: #015871;
+  margin-top: 20px;
+  padding: 20px;
+  color: Gainsboro;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.endCredits {
+  float: left;
+  font-size: 130%;
+}
+.socialBox a {
+  margin: 0 5px 0 5px;
+}

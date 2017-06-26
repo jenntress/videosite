@@ -1,0 +1,45 @@
+/* HOME CSS */
+
+.homeContainer{
+  text-align: center;
+}
+
+.homeimg{
+  margin-top: 10px;
+  max-width: 500px;
+}
+
+.latestVideosText{
+  font-size: 24px;
+  color: #5D5661;
+  display: block!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  }
+
+  .cardsContainer{
+    display: flex;
+    justify-content: space-between;
+    }
+.card{
+  background: #FFFFFF;
+  border: 5px solid #FC8004;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.50);
+  border-radius: 2px;
+  height: 350px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  }
+.cardTitle{
+  font-size: 18px;
+  color: #5D5661;
+  text-align: center;
+  }
+.cardDescription{
+  color: #5D5661;
+  font-size: 80%;
+  padding: 10px;
+  }
