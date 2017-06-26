@@ -10,7 +10,7 @@ const SignUp = (props) => (
         	<option value="">Nothing</option>
         	<option value="teacher">Teacher</option>
         	<option value="subscriber">Subscriber</option>
-        </select> 
+        </select>
 
         <label>First Name</label>
         <input type='text' className="form-control" placeholder="first name"

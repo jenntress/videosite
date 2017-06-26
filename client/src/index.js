@@ -3,9 +3,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
-import {HomeContainer, 
-		AboutContainer, 
-		SignUpContainer, 
+import {HomeContainer,
+		AboutContainer,
+		SignUpContainer,
 		LoginContainer,
 		TeacherDashboardContainer,
 		SubscriberDashboardContainer,
