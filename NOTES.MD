@@ -10,23 +10,32 @@
 - Alignment of elements on homepage.
 - Breadcrumb navigation (harder than I thought!)
 - Ugly/old CSS on every page.
-- Input fields span beyond container on SignUp page.
+- Input fields span beyond container on SignUp page. (not on Cody's)
+- Import google font not working.
+- User interface "login/logout - only view user authorized"
 
 
 ## POSTMAN ROUTES
 *COURSES*
-app.post /api/courses
-app.get /api/courses
-app.get /api/courses/:course_id
-app.put /api/courses/:course_id
-app.delete /api/courses/:course_id
+POST /api/courses
+GET /api/courses
+GET /api/courses/:course_id
+PUT /api/courses/:course_id
+DELETE /api/courses/:course_id
 
 *lESSONS*
-app.post /api/lessons/:course_id
-app.get /api/lessons
-app.get /api/lessons/:lesson_id
-app.put /api/lessons/:lesson_id
-app.delete /api/lessons/:lesson_id
+POST /api/lessons/:course_id
+  - BODY: title, sequence, videoURL, objective, markedComplete, archived, published
+GET /api/lessons
+GET /api/lessons/:lesson_id
+PUT /api/lessons/:lesson_id
+DELETE /api/lessons/:lesson_id
+
+*USERS*
+POST /api/signup
+GET /api/get_user
+POST /api/login
+GET /api/logout
 
 ## SUMMARY OF CHANGES
 - 6/25/17: Jenn updated NOTES & README.MDs, added footer and navbar, courselist, and homepage ajax rendering, and shared styles CSS for page-container.

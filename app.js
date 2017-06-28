@@ -13,11 +13,11 @@ var auth = require('./routes/auth');
 require('./config/database-connection')(); //mongoose is configured at this location instead of inside this app.js
 
 
-//need to wrap this seeder in an if statement because it's checking true or false.
+// need to wrap this seeder in an if statement because it's checking true or false.
 // we NEVER upload .env stuff to github - DELETE or COMMENT OUT!!!
- // if(process.env.SEED_DATABASE === "true"){
- //   require('./config/database-seeder')();
- // }
+//  if(process.env.SEED_DATABASE === "true"){
+//    require('./config/database-seeder')();
+//  }
 
 var app = express();
 
