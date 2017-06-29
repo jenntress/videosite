@@ -7,7 +7,7 @@ require('bootstrap/dist/css/bootstrap.css');
 
 
 
-const NavigationBar = () =>
+const NavigationBar = (props) =>
 
   <nav className={topnav}>
       <div className={logo}>
@@ -22,6 +22,7 @@ const NavigationBar = () =>
         <Link to="/CourseList">courses</Link>
         <Link to="/signup">sign up</Link>
         <Link to="/login">log in</Link>
+        <button type="button" onClick={(event) => props.handleSubmit(event)}>log out</button>
       </div>
   </nav>
 

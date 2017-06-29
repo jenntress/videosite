@@ -7,3 +7,5 @@ export {default as SubscriberDashboardContainer} from './SubscriberDashboard/Sub
 export {default as SingleCourseViewContainer} from './SingleCourseView/SingleCourseViewContainer';
 export {default as SingleLessonViewContainer} from './SingleLessonView/SingleLessonViewContainer';
 export {default as CourseListContainer} from './CourseList/CourseListContainer';
+export {default as NavBarContainer} from './NavBar/NavBarContainer';
+
