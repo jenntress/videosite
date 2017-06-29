@@ -50,6 +50,7 @@ module.exports = function(app, passport){
           }
           req.logIn(user, function(err){
             if(err) res.json({error: err.message}); //uses json to send back error to client
+            
             return res.json({
               message: 'Successfully logged in. Welcome back!',
               user: user
