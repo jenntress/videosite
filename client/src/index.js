@@ -27,7 +27,7 @@ ReactDOM.render(
       <Route path="/Login" component={LoginContainer} />
       <Route path="/TeacherDashboard" component={TeacherDashboardContainer} />
       <Route path="/SubscriberDashboard" component={SubscriberDashboardContainer} />
-      <Route path="/SingleCourseView" component={SingleCourseViewContainer} />
+      <Route path="/SingleCourseView/:courseId" component={SingleCourseViewContainer} />
       <Route path="/SingleLessonView" component={SingleLessonViewContainer} />
       <Route path="/CourseList" component={CourseListContainer} />
     </Route>

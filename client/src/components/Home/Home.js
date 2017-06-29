@@ -9,8 +9,8 @@ import {homeContainer, homeimg, cardsContainer, latestVideosText,
 const Home = (props) => (
     <div className={homeContainer}>
       <img className={homeimg} src="https://elearningindustry.com/wp-content/uploads/2014/09/3-Easy-Methods-to-Create-eLearning-Videos.jpg" alt="" />
-      <div className={cardsContainer}>
-        <p className={latestVideosText}>LATEST VIDEOS</p>
+      <p className={latestVideosText}>LATEST COURSES</p>
+      <div className={cardsContainer}>      
         {props.courses.slice(0, 3).map((item, index) => (
               <div className={card} key={index}>
                 <p className={cardTitle}>{item.title}</p>
