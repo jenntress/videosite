@@ -34,8 +34,8 @@ class LoginContainer extends Component{
   render(){
     return(
       <Login
-        updateField = {this.updateField}
-        handleSubmit = {this.handleSubmit}
+        updateField={this.updateField}
+        handleSubmit={this.handleSubmit}
       />
     )
   }

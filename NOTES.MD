@@ -24,8 +24,9 @@ PUT /api/courses/:course_id
 DELETE /api/courses/:course_id
 
 *lESSONS*
+- get a course id FIRST, then paste it in the URL
+- BODY: title, sequence, videoURL, objective, markedComplete, archived, published
 POST /api/lessons/:course_id
-  - BODY: title, sequence, videoURL, objective, markedComplete, archived, published
 GET /api/lessons
 GET /api/lessons/:lesson_id
 PUT /api/lessons/:lesson_id
