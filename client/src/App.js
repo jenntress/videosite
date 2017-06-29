@@ -1,6 +1,6 @@
 
 import React, { Component} from 'react';
-import NavigationBar from './components/NavBar/NavBar';
+import NavBar from './containers/NavBar/NavBarContainer';
 import Footer from './components/Footer/Footer';
 
 
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavigationBar />
+        <NavBar />
         {this.props.children}
         <Footer />
       </div>

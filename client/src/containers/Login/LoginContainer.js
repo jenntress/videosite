@@ -6,7 +6,8 @@ import {Login} from '../../components';
 class LoginContainer extends Component{
   state = {
     email: undefined,
-    password: undefined
+    password: undefined,
+    role: undefined
   }
   updateField = this.updateField.bind(this);
   updateField(field, value){
@@ -20,16 +21,21 @@ class LoginContainer extends Component{
     console.log('state is now:', this.state);
     const local = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
+      role: this.state.role
     }
     $.ajax({
       url: '/api/login',
       method: 'POST',
       data: local
 
-      //(response.user._id && response.user.role === "te") for if else statements tomorrow.
-    }).done((response) => (response.user._id) ? browserHistory.push('/SubscriberDashboard'):
-      browserHistory.push(`/error/${response.message}`));
+    }).done((response) => {
+    						console.log(response);
+    					  (response.user._id && response.user.local.role === "teacher") ? 
+    					   browserHistory.push('/TeacherDashboard') : 
+    					   (response.user._id && response.user.local.role === "subscriber") ?
+    					   browserHistory.push('/SubscriberDashboard') :
+      					   browserHistory.push(`/error/${response.message}`)});
   }
   render(){
     return(

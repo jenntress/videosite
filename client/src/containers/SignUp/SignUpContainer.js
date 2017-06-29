@@ -24,7 +24,11 @@ class SignUpContainer extends Component {
 	  handleSubmit(event){ //this is  function
 	    event.preventDefault();//this is a method (not a property of an object)
 	    console.log('STATE IS NOW: ', this.state);
-	    const local = {email: this.state.email, password: this.state.password};
+	    const local = {email: this.state.email, 
+                     password: this.state.password, 
+                     role: this.state.role, 
+                     firstName: this.state.firstName,
+                     lastName: this.state.lastName};
 	    $.ajax({
 	      url: '/api/signup',
 	      method: 'POST',
