@@ -25,7 +25,7 @@ class NavBarContainer extends Component {
 		return(
 			<div>
 				<NavBar
-				isAuthed={this.props.user ? this.props.user.local : null}
+				isAuthed={this.props.isAuthed}
 				handleSubmit={this.handleSubmit}
 				/>
 			</div>

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {browserHistory} from 'react-router';
 import $ from 'jquery';
 import {Login} from '../../components';
 
@@ -28,12 +27,12 @@ class LoginContainer extends Component{
       data: local
 
     }).done((response) => {
-    						console.log(response);
+    						console.log(response.user.local);
     					  (response.user._id && response.user.local.role === "teacher") ?
-    					   browserHistory.push('/TeacherDashboard') :
+    					   window.location='/TeacherDashboard' :
     					   (response.user._id && response.user.local.role === "subscriber") ?
-    					   browserHistory.push('/SubscriberDashboard') :
-      					   browserHistory.push(`/error/${response.message}`)});
+    					   window.location='/SubscriberDashboard' :
+      					   window.location=`/error/${response.message}`});
   }
   render(){
     return(

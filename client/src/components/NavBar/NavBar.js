@@ -24,7 +24,7 @@ const NavigationBar = (props) =>
         <div>{
           (!props.isAuthed) ?
           <div><Link to="/signup">sign up</Link><Link to="/login">log in</Link></div> :
-          <button type="button" onClick={(event) => props.handleSubmit(event)}>log out</button>
+          <button type="button" onClick={(event) => props.handleSubmit(event)}>log out</button> 
         }</div>
       </div>
   </nav>

@@ -27,9 +27,9 @@ getUser(){
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBar isAuthed={(this.state.user) ? this.state.user.isAuthed : false}/>
         {this.state.user ? React.cloneElement (this.props.children,
-          {user: this.state.user}) : <h1>...Loading</h1>}
+          { user: this.state.user }) : <h1>...Loading</h1>}
         <Footer />
       </div>
     )
