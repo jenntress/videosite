@@ -6,8 +6,7 @@ import {Login} from '../../components';
 class LoginContainer extends Component{
   state = {
     email: undefined,
-    password: undefined,
-    role: undefined
+    password: undefined
   }
   updateField = this.updateField.bind(this);
   updateField(field, value){
@@ -21,8 +20,7 @@ class LoginContainer extends Component{
     console.log('state is now:', this.state);
     const local = {
       email: this.state.email,
-      password: this.state.password,
-      role: this.state.role
+      password: this.state.password
     }
     $.ajax({
       url: '/api/login',
@@ -31,8 +29,8 @@ class LoginContainer extends Component{
 
     }).done((response) => {
     						console.log(response);
-    					  (response.user._id && response.user.local.role === "teacher") ? 
-    					   browserHistory.push('/TeacherDashboard') : 
+    					  (response.user._id && response.user.local.role === "teacher") ?
+    					   browserHistory.push('/TeacherDashboard') :
     					   (response.user._id && response.user.local.role === "subscriber") ?
     					   browserHistory.push('/SubscriberDashboard') :
       					   browserHistory.push(`/error/${response.message}`)});
