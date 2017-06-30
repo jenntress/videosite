@@ -3,6 +3,13 @@ import $ from 'jquery';
 import {NavBar} from '../../components';
 
 class NavBarContainer extends Component {
+	state = {
+		isAuthed: undefined
+	}
+
+	componentDidMount = () => (
+		this.props.user ? this.setState({isAuthed: this.props.user.isAuthed}) : null
+	)
 
 	handleSubmit = this.handleSubmit.bind(this);
 
@@ -10,19 +17,20 @@ class NavBarContainer extends Component {
 		$.ajax({
 			url: '/api/logout',
 			method: 'GET'
-		}).done((response) => window.location="/home");  
+		}).done((response) => window.location="/home");
 	}
+
 
 	render(){
 		return(
 			<div>
-				<NavBar handleSubmit={this.handleSubmit} />
+				<NavBar
+				isAuthed={this.props.user ? this.props.user.local : null}
+				handleSubmit={this.handleSubmit}
+				/>
 			</div>
 		)
 	}
-
 }
-
-
 
 export default NavBarContainer;

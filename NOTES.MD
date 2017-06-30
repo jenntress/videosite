@@ -38,5 +38,5 @@ GET /api/get_user
 POST /api/login
 GET /api/logout
 
-## SUMMARY OF CHANGES
+## SUMMARY OF CHANGES 
 - 6/25/17: Jenn updated NOTES & README.MDs, added footer and navbar, courselist, and homepage ajax rendering, and shared styles CSS for page-container.

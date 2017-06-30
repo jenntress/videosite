@@ -8,8 +8,7 @@ const UserSchema = new mongoose.Schema({
     email: String, //login email
     password: String, //unique encrypted password
     stripeId: String, //Get from stripe.customers.retrieve or .create 
-    //courseNames: [{String}], 
-    role: String // Admin, Teacher, Sub
+    role: {required: true, type: String} // Teacher, Sub
   }
 });
 

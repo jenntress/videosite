@@ -20,9 +20,12 @@ const NavigationBar = (props) =>
         <Link to="/TeacherDashboard">teacher</Link>
         <Link to="/SubscriberDashboard">subscriber</Link>
         <Link to="/CourseList">courses</Link>
-        <Link to="/signup">sign up</Link>
-        <Link to="/login">log in</Link>
-        <button type="button" onClick={(event) => props.handleSubmit(event)}>log out</button>
+
+        <div>{
+          (!props.isAuthed) ?
+          <div><Link to="/signup">sign up</Link><Link to="/login">log in</Link></div> :
+          <button type="button" onClick={(event) => props.handleSubmit(event)}>log out</button>
+        }</div>
       </div>
   </nav>
 
