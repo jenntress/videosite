@@ -12,7 +12,11 @@ const SingleLessonView = (props) => (
 		   <p>Published: {props.published}</p>
 		   <p>Marked Complete: {props.markedComplete}</p>
 		   <p>Archived: {props.archived}</p>
-		   <Link className="btn btn-default" to="/CourseList">Back to Course(not working yet</Link>
+		   <Link 
+		   		className="btn btn-default" 
+		   		to={`/SingleCourseView/${props.context.classId}`}>
+		   		Back to Course(not working yet)
+		   </Link>
 	  </div>
   </div>
 )

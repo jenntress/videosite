@@ -4,12 +4,15 @@ import {NavBar} from '../../components';
 
 class NavBarContainer extends Component {
 	state = {
-		isAuthed: undefined
+		isAuthed: undefined,
+		role: undefined
 	}
 
-	componentDidMount = () => (
+	componentDidMount = () => {
+		console.log("This is this.props", this.props)
 		this.props.user ? this.setState({isAuthed: this.props.user.isAuthed}) : null
-	)
+		this.props.user ? this.setState({role: this.props.user.user.local.role}) : null
+	}
 
 	handleSubmit = this.handleSubmit.bind(this);
 
@@ -26,6 +29,7 @@ class NavBarContainer extends Component {
 			<div>
 				<NavBar
 				isAuthed={this.props.isAuthed}
+				role={this.state.role}
 				handleSubmit={this.handleSubmit}
 				/>
 			</div>
