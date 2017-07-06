@@ -14,7 +14,8 @@ class SingleLessonViewContainer extends Component {
 		objective: undefined,
 		markedComplete: undefined,
 		archived: undefined,
-		published: undefined
+		published: undefined,
+		course: undefined
 	}
 
 	loadLesson = this.loadLesson.bind(this)
@@ -35,6 +36,7 @@ class SingleLessonViewContainer extends Component {
 		   		markedComplete: response.data.markedComplete,
 		   		archived: response.data.archived,
 		   		published: response.data.published,
+					course: response.data.course,
 		   		isFetching: false
 		   });
 		});
@@ -53,6 +55,7 @@ class SingleLessonViewContainer extends Component {
 		markedComplete={this.state.markedComplete}
 		archived={this.state.archived}
 		published={this.state.published}
+		course={this.state.course}
        /> : <h3>Loading...</h3>
       }
       </div>

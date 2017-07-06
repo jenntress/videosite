@@ -7,7 +7,8 @@ var LessonSchema = new mongoose.Schema({
   objective: String,
   markedComplete: Boolean,
   archived: Boolean,
-  published: Boolean
+  published: Boolean,
+  course: {type: mongoose.Schema.Types.ObjectId, ref: 'Course'}
 });
 
 LessonSchema.methods.loadData = function(data){
@@ -18,7 +19,7 @@ LessonSchema.methods.loadData = function(data){
   this.markedComplete = data.markedComplete ? data.markedComplete : this.markedComplete;
   this.archived = data.archived ? data.archived : this.archived;
   this.published = data.published ? data.published : this.published;
-
+  this.course = data.course ? data.course : this.course;
 };
 
 module.exports = mongoose.model('Lesson', LessonSchema);

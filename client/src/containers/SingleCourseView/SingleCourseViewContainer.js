@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import {SingleCourseView, SingleLessonView} from '../../components';
 import $ from 'jquery';
 
-
-
 class SingleCourseViewContainer extends Component {
 
   state = {
@@ -37,28 +35,18 @@ class SingleCourseViewContainer extends Component {
        });
      }
 
-//ADDED FOR CONTEXT TRIAL
-    
-    // getChildContext() {
-    //   return {id: classId.string};
-    //   console.log(classId);
-    // }
-  
   render(){
     return (
       <div>
       { !this.state.isFetching ?
        <SingleCourseView
-         id={this.state.id} 
+         id={this.state.id}
          title={this.state.title}
          description={this.state.description}
          price={this.state.price}
          lessons={this.state.lessons}
          /> : <h3>Loading...</h3>
       }
-      { <SingleLessonView
-          classId={this.context.id}
-      />}
       </div>
     )
   }
