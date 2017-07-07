@@ -13,8 +13,6 @@ import {HomeContainer,
 		    SingleLessonViewContainer,
 		    CourseListContainer} from './containers';
 require('bootstrap/dist/css/bootstrap.css'); // need to call here AND in public/index.html
-import './index.css';
-
 
 import App from './App';
 
