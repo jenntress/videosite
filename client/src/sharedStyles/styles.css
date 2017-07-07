@@ -1,13 +1,6 @@
 /* SHARED STYLES */
 
-@font-face {
-  font-family: 'Rosarivo';
-  src: url('http://fonts.googleapis.com/css?family=Rosarvio');
-}
-
-
 body {
-  font-family: 'Rosarivo', serif;
   background-color: Gainsboro;
   width: 90%;
   display: block!important;
