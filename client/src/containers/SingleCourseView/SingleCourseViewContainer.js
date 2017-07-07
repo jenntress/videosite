@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SingleCourseView, SingleLessonView} from '../../components';
+import {SingleCourseView} from '../../components';
 import $ from 'jquery';
 
 class SingleCourseViewContainer extends Component {

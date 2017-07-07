@@ -11,6 +11,7 @@ import {HomeContainer,
 		    SubscriberDashboardContainer,
 		    SingleCourseViewContainer,
 		    SingleLessonViewContainer,
+				EditCourseContainer,
 		    CourseListContainer} from './containers';
 require('bootstrap/dist/css/bootstrap.css'); // need to call here AND in public/index.html
 
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Route path="/SingleCourseView/:courseId" component={SingleCourseViewContainer} />
       <Route path="/SingleLessonView/:lessonId" component={SingleLessonViewContainer} />
       <Route path="/CourseList" component={CourseListContainer} />
+      <Route path="/EditCourse/:courseId" component={EditCourseContainer} />			
     </Route>
   </Router>,
   document.getElementById('root')
