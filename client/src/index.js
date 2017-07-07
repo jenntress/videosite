@@ -15,7 +15,6 @@ import {HomeContainer,
 		    CourseListContainer} from './containers';
 require('bootstrap/dist/css/bootstrap.css'); // need to call here AND in public/index.html
 
-
 import App from './App';
 
 ReactDOM.render(
