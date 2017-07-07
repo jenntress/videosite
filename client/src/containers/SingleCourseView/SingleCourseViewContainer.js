@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SingleCourseView} from '../../components';
+import {SingleCourseView, SingleLessonView} from '../../components';
 import $ from 'jquery';
 
 class SingleCourseViewContainer extends Component {
@@ -46,7 +46,7 @@ class SingleCourseViewContainer extends Component {
          price={this.state.price}
          lessons={this.state.lessons}
          /> : <h3>Loading...</h3>
-     }
+      }
       </div>
     )
   }

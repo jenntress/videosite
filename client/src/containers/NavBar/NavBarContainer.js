@@ -3,13 +3,6 @@ import $ from 'jquery';
 import {NavBar} from '../../components';
 
 class NavBarContainer extends Component {
-	state = {
-		isAuthed: undefined
-	}
-
-	componentDidMount = () => (
-		this.props.user ? this.setState({isAuthed: this.props.user.isAuthed}) : null
-	)
 
 	handleSubmit = this.handleSubmit.bind(this);
 
@@ -26,6 +19,7 @@ class NavBarContainer extends Component {
 			<div>
 				<NavBar
 				isAuthed={this.props.isAuthed}
+				role={this.props.role}
 				handleSubmit={this.handleSubmit}
 				/>
 			</div>

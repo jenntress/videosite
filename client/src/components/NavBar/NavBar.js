@@ -7,26 +7,37 @@ require('bootstrap/dist/css/bootstrap.css');
 
 
 
-const NavigationBar = (props) =>
-
+const NavigationBar = ({user,role,isAuthed,handleSubmit}) =>
   <nav className={topnav}>
       <div className={logo}>
         <p>vidz</p>
       </div>
 
       <div className={navLinkContainer}>
-        <Link to="/">home</Link>
-        <Link to="/about">about</Link>
-        <Link to="/TeacherDashboard">teacher</Link>
-        <Link to="/SubscriberDashboard">subscriber</Link>
-        <Link to="/CourseList">courses</Link>
 
-        <div>{
-          (!props.isAuthed) ?
+        <div><Link to="/">home</Link></div>
+        <div><Link to="/about">about</Link></div>
+
+
+        <div>
+          {
+            (role === "teacher") ?
+            <Link to="/TeacherDashboard">teacher</Link> :
+            (role === "subscriber") ?
+            <Link to="/SubscriberDashboard">subscriber</Link> : null
+          }
+        </div>
+
+        <div><Link to="/CourseList">courses</Link></div>
+
+        <div>
+          {
+          (!isAuthed) ?
           <div><Link to="/signup">sign up</Link><Link to="/login">log in</Link></div> :
-          <button type="button" onClick={(event) => props.handleSubmit(event)}>log out</button>
-        }</div>
-      </div>
+          <button type="button" onClick={(event) => handleSubmit(event)}>log out</button>
+          }
+        </div>
+        </div>
   </nav>
 
 

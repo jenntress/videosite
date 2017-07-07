@@ -8,6 +8,8 @@ import $ from 'jquery';
 class App extends Component {
   state = {
     user: undefined,
+    isAuthed: undefined,
+    role: undefined
   }
 
 componentDidMount = () => this.getUser();
@@ -19,7 +21,9 @@ getUser(){
   }).done((response) => {
     console.log("HERE IS THE CURRENT USER", response)
     this.setState({
-      user: response
+      user: response.user,
+      isAuthed: response.isAuthed,
+      role: response.user.local.role
     })
   })
 }
@@ -27,9 +31,12 @@ getUser(){
   render() {
     return (
       <div>
-        <NavBar isAuthed={(this.state.user) ? this.state.user.isAuthed : false}/>
-        {this.state.user ? React.cloneElement (this.props.children,
-          { user: this.state.user }) : <h1>...Loading</h1>}
+        <div>
+          {<NavBar {...this.state}/>}
+        </div>
+        <div>
+          {React.cloneElement (this.props.children, { ...this.state })}
+        </div>
         <Footer />
       </div>
     )
