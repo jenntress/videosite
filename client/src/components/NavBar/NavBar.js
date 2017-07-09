@@ -18,13 +18,12 @@ const NavigationBar = ({user,role,isAuthed,handleSubmit}) =>
         <div><Link to="/">home</Link></div>
         <div><Link to="/about">about</Link></div>
 
-
         <div>
           {
             (role === "teacher") ?
-            <Link to="/TeacherDashboard">teacher</Link> :
+            <Link to="/TeacherDashboard">dashboard</Link> :
             (role === "subscriber") ?
-            <Link to="/SubscriberDashboard">subscriber</Link> : null
+            <Link to="/SubscriberDashboard">dashboard</Link> : null
           }
         </div>
 
@@ -37,7 +36,7 @@ const NavigationBar = ({user,role,isAuthed,handleSubmit}) =>
           <button type="button" onClick={(event) => handleSubmit(event)}>log out</button>
           }
         </div>
-        </div>
+      </div>
   </nav>
 
 

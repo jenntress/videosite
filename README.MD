@@ -15,25 +15,30 @@ Run three console windows simultaneously
 2. cd into root dir `npm run mon`
 3. cd into /client `npm start`
 
-## POSTMAN ROUTES
+## Postman Routes
 *COURSES*
-POST /api/courses
-GET /api/courses
-GET /api/courses/course_id
-PUT /api/courses/course_id
-DELETE /api/courses/course_id
+- POST /api/courses
+ - BODY: title, price, dateCreated, description, published(y/n)
+- GET /api/courses
+- GET /api/courses/course_id
+- PUT /api/courses/course_id
+- DELETE /api/courses/course_id
 
-*lESSONS*
-- get a course id FIRST, then paste it in the URL
-- BODY: title, sequence, videoURL, objective, markedComplete, archived, published, course ('course' is the courseID)
-POST /api/lessons/course_id
-GET /api/lessons
-GET /api/lessons/lesson_id
-PUT /api/lessons/lesson_id
-DELETE /api/lessons/lesson_id
+*LESSONS*
+- POST /api/lessons/course_id
+ - get a course id FIRST, then paste it in the URL
+ - BODY: title, sequence, videoURL, objective, markedComplete, archived, published, course ('course' is the courseID)
+- GET /api/lessons
+- GET /api/lessons/lesson_id
+- PUT /api/lessons/lesson_id
+- DELETE /api/lessons/lesson_id
 
 *USERS*
-POST /api/signup
-GET /api/get_user
-POST /api/login
-GET /api/logout
+- POST /api/signup
+- GET /api/get_user
+- POST /api/login
+- GET /api/logout
+
+
+## Working logins
+ - JENN: subscriber: l@l.com/l | teacher: k@k.com/k

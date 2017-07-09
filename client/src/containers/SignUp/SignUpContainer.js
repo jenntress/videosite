@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
 import {SignUp} from '../../components';
-import {browserHistory} from 'react-router';
 
 class SignUpContainer extends Component {
 
@@ -24,9 +23,9 @@ class SignUpContainer extends Component {
 	  handleSubmit(event){ //this is  function
 	    event.preventDefault();//this is a method (not a property of an object)
 	    console.log('STATE IS NOW: ', this.state);
-	    const local = {email: this.state.email, 
-                     password: this.state.password, 
-                     role: this.state.role, 
+	    const local = {email: this.state.email,
+                     password: this.state.password,
+                     role: this.state.role,
                      firstName: this.state.firstName,
                      lastName: this.state.lastName};
 	    $.ajax({
@@ -36,8 +35,8 @@ class SignUpContainer extends Component {
 	    }).done((response) => (
 	      console.log("SUCCESS AT SIGN UP")) ||
 	      (response._id) ? //users have to go back to the login page
-	      browserHistory.push('/login') :
-	      browserHistory.push(`/err/${response.message}`));
+	      window.location='/login' :
+	      window.location=`/err/${response.message}`);
 	  }
 
   render(){
