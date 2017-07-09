@@ -1,0 +1,19 @@
+/* TeacherDashboard stylesheet */
+
+.dashNav {
+  margin: 20px 0 0 50px;
+  display: grid;
+}
+.dashNav a {
+  margin: 5px;
+  padding: 5px 5px;
+  font-size: 150%;
+	color: #000;
+  text-decoration: none;
+}
+.dashNav a:hover {
+  margin: 5px;
+  padding: 5px 5px;
+	color: #CCC;
+  text-decoration: none;
+}

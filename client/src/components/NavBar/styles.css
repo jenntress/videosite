@@ -1,3 +1,4 @@
+/* NavBar stylesheet */
 
 .topnav {
   margin-top: 20px;
@@ -15,6 +16,11 @@
 .navLinkContainer {
   font-family: "Goudy Bookletter 1911", sans-serif;
 }
+
+.navLinkContainer div {
+  display: inline;
+}
+
 .navLinkContainer a {
   margin: 5px;
   padding: 5px 5px;
