@@ -11,6 +11,7 @@ const TeacherDashboard = () => (
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
       <Link to="/CourseList">View All Courses</Link>
+      <Link to="/AddCourse">Create New Course</Link>
     </div>
   </div>
 

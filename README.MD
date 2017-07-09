@@ -18,7 +18,7 @@ Run three console windows simultaneously
 ## Postman Routes
 *COURSES*
 - POST /api/courses
- - BODY: title, price, dateCreated, description, published(y/n)
+ - body: title, price, dateCreated, description, published(y/n)
 - GET /api/courses
 - GET /api/courses/course_id
 - PUT /api/courses/course_id
@@ -27,7 +27,7 @@ Run three console windows simultaneously
 *LESSONS*
 - POST /api/lessons/course_id
  - get a course id FIRST, then paste it in the URL
- - BODY: title, sequence, videoURL, objective, markedComplete, archived, published, course ('course' is the courseID)
+ - body: title, sequence, videoURL, objective, markedComplete, archived, published, course ('course' is the courseID)
 - GET /api/lessons
 - GET /api/lessons/lesson_id
 - PUT /api/lessons/lesson_id
