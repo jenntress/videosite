@@ -30,13 +30,13 @@ const EditCourse = (props) => (
 
       <div className="form-group">
         <label>Published</label>
-        <input type="checkbox" className="form-control" value={props.published}
+        <input type="checkbox" className="custom-control-input" value={props.published}
           onChange={(event) => props.updateField('published', event.target.value)}
         />
       </div>
 
       <button type="submit" className="btn btn-success">Save</button>
-      <Link className="btn btn-default" to="/CourseList">Back to Course</Link>
+      <Link className="btn btn-danger" to="/CourseList">Cancel</Link>
     </form>
   </div>
 )
