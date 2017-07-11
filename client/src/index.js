@@ -13,7 +13,8 @@ import {HomeContainer,
 		    SingleLessonViewContainer,
 				EditCourseContainer,
 				AddCourseContainer,
-		    CourseListContainer} from './containers';
+		    CourseListContainer,
+				EditLessonContainer} from './containers';
 require('bootstrap/dist/css/bootstrap.css'); // need to call here AND in public/index.html
 
 import App from './App';
@@ -33,6 +34,7 @@ ReactDOM.render(
       <Route path="/CourseList" component={CourseListContainer} />
       <Route path="/EditCourse/:courseId" component={EditCourseContainer} />
       <Route path="/AddCourse" component={AddCourseContainer} />
+			<Route path="/EditLesson/:lessonId" component={EditLessonContainer} />
     </Route>
   </Router>,
   document.getElementById('root')

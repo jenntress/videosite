@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import {EditCourse} from '../../components';
 
-
 class EditCourseContainer extends Component {
   state = {
     isFetching: false,

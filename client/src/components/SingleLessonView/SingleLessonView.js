@@ -3,20 +3,28 @@ import { Link } from 'react-router';
 import { lessoncontainer } from './styles.css';
 
 
-const SingleLessonView = (props, context) => (
+const SingleLessonView = (props) => (
 
   <div className={lessoncontainer}>
 	  <div>
 		   <h2>{props.title}</h2>
+
 		   <p>Sequence: {props.sequence}</p>
 		   <p>{props.objective}</p>
 		   <p>{props.videoURL}</p>
 		   <p>Published: {props.published}</p>
 		   <p>Marked Complete: {props.markedComplete}</p>
 		   <p>Archived: {props.archived}</p>
-		   <Link
+
+       <Link
+          className="btn btn-success"
+          to={`/EditLesson/${props.id}`}>
+          Edit
+       </Link>
+
+       <Link
 		   		className="btn btn-default"
-		   		to={`/SingleCourseView/${props.course}`}>
+		   		to={`/SingleCourseView/${this.course}`}>
 		   		Back to Course
 		   </Link>
 	  </div>

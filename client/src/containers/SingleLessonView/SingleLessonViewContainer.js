@@ -6,7 +6,7 @@ class SingleLessonViewContainer extends Component {
 
 	state = {
 		isFetching: true,
-		courseId: undefined,
+		//courseId: undefined,
 		lessonId: undefined,
 		title: undefined,
 		sequence: undefined,

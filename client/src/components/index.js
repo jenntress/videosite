@@ -12,3 +12,4 @@ export {default as CourseList} from './CourseList/CourseList';
 export {default as EditCourse} from './EditCourse/EditCourse';
 export {default as NavBar} from './NavBar/NavBar';
 export {default as AddCourse} from './AddCourse/AddCourse';
+export {default as EditLesson} from './EditLesson/EditLesson';
