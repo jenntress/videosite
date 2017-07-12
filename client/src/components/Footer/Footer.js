@@ -12,15 +12,15 @@ const Footer = () =>
       </div>
 
       <div className={socialBox}>
-      <Link to="mailto:cody@codymelton.io">
+      <a href="mailto:cody@codymelton.io">
         <img title="Email" alt="Email" src="http://2015.dnidziedzictwa.pl/files/Rezerwacja-przez-formularz-300x300.jpg" width="35" height="35" />
-      </Link>
-      <Link to="https://www.linkedin.com/in/codymeltonmt/">
+      </a>
+      <a href="https://www.linkedin.com/in/codymeltonmt/" target="_blank">
         <img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/07_linkedin1.png" width="35" height="35" />
-      </Link>
-        <Link to="https://twitter.com/cmeltonmt">
+      </a>
+        <a href="https://twitter.com/cmeltonmt" target="_blank">
           <img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter1.png" width="35" height="35" />
-        </Link>
+        </a>
       </div>
   </nav>
 
