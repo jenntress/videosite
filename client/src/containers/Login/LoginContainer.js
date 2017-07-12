@@ -27,11 +27,14 @@ class LoginContainer extends Component{
       data: local
 
     }).done((response) => {
-
+    						console.log(response);
+    					  (response.user._id && response.user.local.role === "teacher") ?
+    					   browserHistory.push('/TeacherDashboard') :
     						console.log(response.user.local);
     					  (response.user._id && response.user.local.role === "teacher") ?
     					   window.location='/TeacherDashboard' :
-    					  (response.user._id && response.user.local.role === "subscriber") ?
+    					   (response.user._id && response.user.local.role === "subscriber") ?
+
     					   window.location='/SubscriberDashboard' :
       					 window.location=`/error/${response.message}`});
   }
