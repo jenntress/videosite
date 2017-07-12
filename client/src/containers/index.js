@@ -8,4 +8,7 @@ export {default as SingleCourseViewContainer} from './SingleCourseView/SingleCou
 export {default as SingleLessonViewContainer} from './SingleLessonView/SingleLessonViewContainer';
 export {default as CourseListContainer} from './CourseList/CourseListContainer';
 export {default as NavBarContainer} from './NavBar/NavBarContainer';
-
+export {default as EditCourseContainer} from './EditCourse/EditCourseContainer';
+export {default as AddCourseContainer} from './AddCourse/AddCourseContainer';
+export {default as EditLessonContainer} from './EditLesson/EditLessonContainer';
+export {default as AddLessonContainer} from './AddLesson/AddLessonContainer';

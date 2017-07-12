@@ -10,19 +10,21 @@ class NavBarContainer extends Component {
 		$.ajax({
 			url: '/api/logout',
 			method: 'GET'
-		}).done((response) => window.location="/home");  
+		}).done((response) => window.location="/home");
 	}
+
 
 	render(){
 		return(
 			<div>
-				<NavBar handleSubmit={this.handleSubmit} />
+				<NavBar
+				isAuthed={this.props.isAuthed}
+				role={this.props.role}
+				handleSubmit={this.handleSubmit}
+				/>
 			</div>
 		)
 	}
-
 }
-
-
 
 export default NavBarContainer;
