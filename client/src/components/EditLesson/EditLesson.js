@@ -49,7 +49,7 @@ const EditLesson = (props) => (
       </div>
 
       <button type="submit" className="btn btn-success">Save</button>
-      <Link className="btn btn-danger" to={`/SingleCourseView/${props.course}`}>Cancel</Link>
+      <Link className="btn btn-danger" to={`/SingleLessonView/${props.id}`}>Cancel</Link>
     </form>
     </div>
 )

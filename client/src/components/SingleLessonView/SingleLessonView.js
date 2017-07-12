@@ -18,13 +18,13 @@ const SingleLessonView = (props) => (
 
        <Link
           className="btn btn-success"
-          to={`/EditLesson/${props.id}`}>
+          to={`/EditLesson/${props.lessonId}`}>
           Edit
        </Link>
 
        <Link
 		   		className="btn btn-default"
-		   		to={`/SingleCourseView/${this.course}`}>
+		   		to={`/SingleCourseView/${props.course}`}>
 		   		Back to Course
 		   </Link>
 	  </div>

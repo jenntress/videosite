@@ -38,7 +38,8 @@ class EditLessonContainer extends Component {
         videoURL: response.data.videoURL,
         objective: response.data.objective,
         archived: response.data.objective,
-        published: response.data.published
+        published: response.data.published,
+        isFetching: true
       });
     })
   }
