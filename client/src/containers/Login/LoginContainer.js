@@ -31,8 +31,8 @@ class LoginContainer extends Component{
 
     }).done((response) => {
     						console.log(response);
-    					  (response.user._id && response.user.local.role === "teacher") ? 
-    					   browserHistory.push('/TeacherDashboard') : 
+    					  (response.user._id && response.user.local.role === "teacher") ?
+    					   browserHistory.push('/TeacherDashboard') :
     					   (response.user._id && response.user.local.role === "subscriber") ?
     					   browserHistory.push('/SubscriberDashboard') :
       					   browserHistory.push(`/error/${response.message}`)});
@@ -40,8 +40,8 @@ class LoginContainer extends Component{
   render(){
     return(
       <Login
-        updateField = {this.updateField}
-        handleSubmit = {this.handleSubmit}
+        updateField={this.updateField}
+        handleSubmit={this.handleSubmit}
       />
     )
   }
