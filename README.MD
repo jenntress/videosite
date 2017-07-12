@@ -29,6 +29,7 @@ Run three console windows simultaneously
 - /EditCourse/courseId
 - /AddCourse
 - /EditLesson/lessonId
+- /AddLesson/courseId
 
 
 ## Postman Routes
