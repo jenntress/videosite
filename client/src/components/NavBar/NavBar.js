@@ -10,7 +10,7 @@ require('bootstrap/dist/css/bootstrap.css');
 const NavigationBar = ({user,role,isAuthed,handleSubmit}) =>
   <nav className={topnav}>
       <div className={logo}>
-        <p>vidz</p>
+        <p>&lt;vidz&gt;</p>
       </div>
 
       <div className={navLinkContainer}>

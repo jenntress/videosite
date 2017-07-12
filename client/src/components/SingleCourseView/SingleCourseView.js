@@ -8,8 +8,9 @@ const SingleCourseView = (props) => (
    <h2>{props.title}</h2>
    <p>{props.description}</p>
    <p>${props.price}</p>
-   <Link className="btn btn-success" to={`/EditCourse/${props.id}`}>Edit</Link>
-   <Link className="btn btn-default" to="/CourseList">Back to Courses</Link>
+   <Link className="btn btn-success" to={`/EditCourse/${props.id}`}> Edit </Link>
+   <Link className="btn btn-warning" to={`/AddLesson/${props.id}`}> Add Lesson </Link>
+   <Link className="btn btn-default" to="/CourseList"> Back to Courses </Link>
   </div>
 
   <div>

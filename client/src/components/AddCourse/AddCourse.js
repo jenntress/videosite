@@ -7,7 +7,7 @@ const AddCourse = (props) => (
       <h3>Add a New Course</h3>
 
       <label>Course Title</label>
-       <input type="text" className="form-control" placeholder="title of article"
+       <input type="text" className="form-control" placeholder="title of course"
          onChange={(event) => props.onChange("title", event.target.value)}/>
 
        <label>Price</label>
@@ -20,13 +20,12 @@ const AddCourse = (props) => (
 
        <label>Visible</label>
         <input type="checkbox" className="custom-control-input"
-          onChange={(event) => props.onChange("description", event.target.value)}/>
+          onChange={(event) => props.onChange("published", event.target.value)}/>
 
          <br />
     <button type="submit" className="btn btn-success">Submit</button>
    </form>
   </div>
 )
-
 
 export default AddCourse;

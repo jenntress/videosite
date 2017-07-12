@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import {browserHistory} from 'react-router';
-import {AddCourse} from '../../components';
+import {AddLesson} from '../../components';
 import $ from 'jquery';
 
-class AddCourseContainer extends Component {
+class AddLessonContainer extends Component {
   state={
     title: undefined,
-    price: undefined,
-    dateCreated: undefined,
-    description: undefined,
+    sequence: undefined,
+    videoURL: undefined,
+    objective: undefined,
+    archived: undefined,
     published: undefined,
+    course:undefined,
     valid: false
   }
 
@@ -27,33 +29,34 @@ class AddCourseContainer extends Component {
     validate(){
       this.setState({
         valid: (this.state.title !== undefined) &&
-               (this.state.price !== undefined) &&
-               (this.state.dateCreated !== undefined) &&
-               (this.state.description !== undefined) &&
-               (this.state.published !== undefined)
+               (this.state.sequence !== undefined) &&
+               (this.state.videoURL !== undefined) &&
+               (this.state.objective !== undefined)
       })
     }
 
   handleSubmit = this.handleSubmit.bind(this)
   handleSubmit(event){
         event.preventDefault()
-        alert('Course Added!')
+        alert('Lesson Added!')
 
-    const blurb={
+    const data={
       title: this.state.title,
-      price: this.state.price,
-      dateCreated: this.state.dateCreated,
-      description: this.state.description,
-      published: this.state.published
+      sequence: this.state.sequence,
+      videoURL: this.state.videoURL,
+      objective: this.state.objective,
+      published: this.state.published,
+      archived: this.state.archived,
+      course: this.props.params.courseId
     }
-console.log(blurb);
+console.log(data);
     $.ajax({
-      url:'/api/courses',
+      url:`/api/lessons/${this.props.params.courseId}`,
       method: 'POST',
-      data: blurb
+      data: data
     }).done((response) => {
       console.log(response)
-      browserHistory.push('/CourseList')
+      browserHistory.push(`/SingleCourseView/${this.props.params.courseId}`)
     })
  }
 
@@ -61,7 +64,7 @@ console.log(blurb);
   render (){
     return (
       <div>
-        <AddCourse
+        <AddLesson
            handleSubmit={this.handleSubmit}
            onChange={this.onChange}
            valid={this.state.valid}
@@ -72,4 +75,4 @@ console.log(blurb);
 
 }
 
-export default AddCourseContainer;
+export default AddLessonContainer;

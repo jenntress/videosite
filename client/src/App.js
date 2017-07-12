@@ -23,7 +23,7 @@ getUser(){
     this.setState({
       user: response.user,
       isAuthed: response.isAuthed,
-      role: response.user.local.role
+      role: (response.isAuthed === true) ? response.user.local.role : null
     })
   })
 }
