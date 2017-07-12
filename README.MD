@@ -15,6 +15,21 @@ Run three console windows simultaneously
 2. cd into root dir `npm run mon`
 3. cd into /client `npm start`
 
+## Browser Routes
+- /home
+- /about
+- /signup
+- /Login
+- /TeacherDashboard
+- /SubscriberDashboard
+- /SingleCourseView/courseId
+- /SingleLessonView/lessonId
+- /CourseList
+- /EditCourse/courseId
+- /AddCourse
+- /EditLesson/lessonId
+
+
 ## Postman Routes
 *COURSES*
 - POST /api/courses
