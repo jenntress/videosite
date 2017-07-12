@@ -4,6 +4,7 @@
 - node.js
 - mongodb
 - console/terminal (gitBash)
+- stripe (npm install stripe in root)
 
 ## Install Instructions: Run commands in CLI
 1. `git clone https://github.com/jenntress/videosite.git`
@@ -42,3 +43,4 @@ Run three console windows simultaneously
 
 ## Working logins
  - JENN: subscriber: l@l.com/l | teacher: k@k.com/k
+ - CODY: subscriber: d@d.com/d | teacher: e@e.com/e
