@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
-import {browserHistory} from 'react-router';
 import $ from 'jquery';
 import {Login} from '../../components';
 
 class LoginContainer extends Component{
   state = {
     email: undefined,
-    password: undefined,
-    role: undefined
+    password: undefined
   }
   updateField = this.updateField.bind(this);
   updateField(field, value){
@@ -21,8 +19,7 @@ class LoginContainer extends Component{
     console.log('state is now:', this.state);
     const local = {
       email: this.state.email,
-      password: this.state.password,
-      role: this.state.role
+      password: this.state.password
     }
     $.ajax({
       url: '/api/login',
@@ -30,12 +27,18 @@ class LoginContainer extends Component{
       data: local
 
     }).done((response) => {
+<<<<<<< HEAD
     						console.log(response);
     					  (response.user._id && response.user.local.role === "teacher") ?
     					   browserHistory.push('/TeacherDashboard') :
+=======
+    						console.log(response.user.local);
+    					  (response.user._id && response.user.local.role === "teacher") ?
+    					   window.location='/TeacherDashboard' :
+>>>>>>> c845bcc705580b363de5461eb796a932e19a70da
     					   (response.user._id && response.user.local.role === "subscriber") ?
-    					   browserHistory.push('/SubscriberDashboard') :
-      					   browserHistory.push(`/error/${response.message}`)});
+    					   window.location='/SubscriberDashboard' :
+      					   window.location=`/error/${response.message}`});
   }
   render(){
     return(

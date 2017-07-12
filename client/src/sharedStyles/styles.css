@@ -1,12 +1,8 @@
 /* SHARED STYLES */
 
-@import url('http://fonts.googleapis.com/css?family=Kavoon');
-
-
 body {
-  font-family: 'Kavoon', serif;
   background-color: Gainsboro;
-  max-width: 1000px;
+  width: 90%;
   display: block!important;
   margin-left: auto!important;
   margin-right: auto!important;
@@ -20,11 +16,12 @@ body {
   padding: 10px;
   background-color: WhiteSmoke;
   margin: 30px;
-  box-shadow:inset 0px 0px 25px rgba(0,0,0,.15);
+  box-shadow:inset 0px 0px 25px rgba(0,0,0,.1);
 }
 
 .mainheader {
   margin: auto;
   padding: 5px;
   text-align: center;
+  color: #FC8004;
 }
