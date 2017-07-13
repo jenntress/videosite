@@ -7,12 +7,12 @@ const Login = (props) => {
       <h3>Hello from Login</h3>
       <div>
         <label> Email </label>
-        <input type="email" onChange={(event) =>
+        <input type="email" className="form-control" onChange={(event) =>
           props.updateField("email", event.target.value)} />
       </div>
       <div>
         <label> Password </label>
-        <input type="password" onChange={(event) =>
+        <input type="password" className="form-control" onChange={(event) =>
         props.updateField("password", event.target.value)} />
       </div>
       <div>

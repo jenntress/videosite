@@ -1,7 +1,6 @@
 
 
 import React from 'react';
-import { Link } from 'react-router';
 import {footerBox, endCredits, socialBox} from './styles.css'; // the local one in this folder
 
 
