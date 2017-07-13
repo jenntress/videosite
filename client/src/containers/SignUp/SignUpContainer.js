@@ -28,7 +28,8 @@ class SignUpContainer extends Component {
                      role: this.state.role,
                      firstName: this.state.firstName,
                      lastName: this.state.lastName};
-	    $.ajax({
+
+      $.ajax({
 	      url: '/api/signup',
 	      method: 'POST',
 	      data: local

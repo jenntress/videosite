@@ -3,6 +3,7 @@
 const express = require('express');
 const CourseRoutes = require('./courses/courses');
 const LessonRoutes = require('./lessons/lessons');
+const StripeRoutes = require('./stripe/stripe');
 
 module.exports = (app) => {
 //the calls below accept two arguments (route, the object from the course.js routes)
@@ -17,4 +18,6 @@ module.exports = (app) => {
 	app.get('/api/lessons/:lesson_id', LessonRoutes.getById);
 	app.put('/api/lessons/:lesson_id', LessonRoutes.updateLesson);
 	app.delete('/api/lessons/:lesson_id', LessonRoutes.removeLesson);
+
+	app.post('/api/StripeGateway/PostPayment', StripeRoutes.cartCheckout)
 }
