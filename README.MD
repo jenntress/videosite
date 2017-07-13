@@ -4,7 +4,7 @@
 - node.js
 - mongodb
 - console/terminal (gitBash)
-- stripe (npm install stripe in root)
+
 
 ## Install Instructions: Run commands in CLI
 1. `git clone https://github.com/jenntress/videosite.git`
