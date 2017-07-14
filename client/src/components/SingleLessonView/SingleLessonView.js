@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { lessoncontainer } from './styles.css';
+import ReactPlayer from 'react-player';
 
 
 const SingleLessonView = (props) => (
@@ -15,6 +16,13 @@ const SingleLessonView = (props) => (
 		   <p>Published: {props.published}</p>
 		   <p>Marked Complete: {props.markedComplete}</p>
 		   <p>Archived: {props.archived}</p>
+
+       <ReactPlayer
+        url={props.videoURL}
+        youtubeConfig={{ preload: true }}
+        // playing
+        // onEnded={() => this.setState({ playing: false })}
+      />
 
        <Link
           className="btn btn-success"

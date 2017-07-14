@@ -45,19 +45,19 @@ class SingleLessonViewContainer extends Component {
   render(){
     return (
       <div>
-      { !this.state.isFetching ?
-       <SingleLessonView
-   		lessonId={this.state.lessonId}
-   		title={this.state.title}
-		sequence={this.state.sequence}
-		videoURL={this.state.videoURL}
-		objective={this.state.objective}
-		markedComplete={this.state.markedComplete}
-		archived={this.state.archived}
-		published={this.state.published}
-		course={this.state.course}
-       /> : <h3>Loading...</h3>
-      }
+	      { !this.state.isFetching ?
+	       <SingleLessonView
+		   		lessonId={this.state.lessonId}
+		   		title={this.state.title}
+					videoURL={this.state.videoURL}
+					sequence={this.state.sequence}
+					objective={this.state.objective}
+					markedComplete={this.state.markedComplete}
+					archived={this.state.archived}
+					published={this.state.published}
+					course={this.state.course}
+	       /> : <h3>Loading...</h3>
+	      }
       </div>
     )
   }

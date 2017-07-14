@@ -10,6 +10,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-icons": "^2.2.5",
+    "react-player": "^0.19.0",
     "react-router": "^3.0.5",
     "react-stripe-checkout": "^2.4.0",
     "stripe": "^4.23.1"
