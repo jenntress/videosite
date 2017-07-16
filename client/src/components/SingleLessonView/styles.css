@@ -6,7 +6,19 @@
   border-radius: 2px;
   padding: 30px;
   background-color: #FFF;
-  margin: 5px;
+  margin: 15px;
   box-shadow: 1px 1px 5px #888;
   min-height: 80%;
+}
+
+.lessonStatus span:after {
+  content: '   |   ';
+}
+
+.lessonStatus span:last-child:after {
+    content: "";
+}
+
+.vidContainer {
+  margin-bottom: 20px;
 }

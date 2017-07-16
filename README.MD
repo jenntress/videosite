@@ -1,10 +1,10 @@
-# Video Learning Site
+# VIDZ
+descripton of this repo goes here
 
 ## Required Software
 - node.js
 - mongodb
 - console/terminal (gitBash)
-
 
 ## Install Instructions: Run commands in CLI
 1. `git clone https://github.com/jenntress/videosite.git`
@@ -31,11 +31,10 @@ Run three console windows simultaneously
 - /EditLesson/lessonId
 - /AddLesson/courseId
 
-
 ## Postman Routes
 *COURSES*
 - POST /api/courses
- - body: title, price, dateCreated, description, published(y/n)
+  * body: title, price, dateCreated, description, published(y/n)
 - GET /api/courses
 - GET /api/courses/course_id
 - PUT /api/courses/course_id
@@ -43,8 +42,8 @@ Run three console windows simultaneously
 
 *LESSONS*
 - POST /api/lessons/course_id
- - get a course id FIRST, then paste it in the URL
- - body: title, sequence, videoURL, objective, markedComplete, archived, published, course ('course' is the courseID)
+  * get a course id FIRST, then paste it in the URL
+  * body: title, sequence, videoURL, objective, markedComplete, archived, published, course ('course' is the courseID)
 - GET /api/lessons
 - GET /api/lessons/lesson_id
 - PUT /api/lessons/lesson_id
@@ -55,7 +54,6 @@ Run three console windows simultaneously
 - GET /api/get_user
 - POST /api/login
 - GET /api/logout
-
 
 ## Working logins
  - JENN: subscriber: l@l.com/l | teacher: k@k.com/k
