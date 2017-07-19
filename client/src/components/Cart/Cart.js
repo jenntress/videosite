@@ -1,4 +1,4 @@
-
+//FOR FUTURE DEVELOPMENT
 import React from 'react';
 
 const Cart = () => (

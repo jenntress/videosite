@@ -3,9 +3,11 @@ import {CourseList} from '../../components';
 import $ from 'jquery';
 
 
+
 class CourseListContainer extends Component {
   state = {
     courses: undefined
+
   }
 
 componentDidMount = () => this.loadCourses()// react lifecycle component

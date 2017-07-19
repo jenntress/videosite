@@ -35,9 +35,6 @@ if (isProd) {
   app.use(express.static(clientPath));
 }
 
-
-routes(app);
-
 app.get('/test', function(req,res){
   res.json({message: "App functioning properly"})
 });
@@ -56,6 +53,7 @@ app.use(session({
 require('./config/passport')(passport); // pass passport for configuration
 require('./routes/auth')(app, passport); // load our routes and pass in our app and fully configured passport
 
+routes(app);
 
 // development error handler
 // will print stacktrace

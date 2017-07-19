@@ -7,9 +7,10 @@ const UserSchema = new mongoose.Schema({
   	lastName: String,
     email: String, //login email
     password: String, //unique encrypted password
-    stripeId: String, //Get from stripe.customers.retrieve or .create 
     role: {required: true, type: String} // Teacher, Sub
-  }
+  },
+  paidCourses: [{type: mongoose.Schema.Types.ObjectId,
+        ref: 'Course'}]
 });
 
 // user password must ALWAYS be encrypted

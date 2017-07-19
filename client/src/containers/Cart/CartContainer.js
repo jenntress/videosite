@@ -1,3 +1,5 @@
+//FOR FUTURE DEVELOPMENT
+
 import React, {Component} from 'react';
 import Checkout from '../../components/Checkout/Checkout';
 import {Cart} from '../../components';
