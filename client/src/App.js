@@ -16,7 +16,7 @@ componentDidMount = () => this.getUser();
 
 getUser(){
   $.ajax({
-    url:`/api/get_user`,
+    url:`/api/get_user`, //forwared ticks when you're trying to interpret a parameter
     method: 'GET',
   }).done((response) => {
     console.log("HERE IS THE CURRENT USER", response)

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { lessoncontainer, vidContainer, lessonStatus } from './styles.css';
-import ReactPlayer from 'react-player';
+import { lessoncontainer, lessonStatus } from './styles.css';
+import VideoPlayerContainer from '../../containers/VideoPlayer/VideoPlayerContainer';
 
 
 const SingleLessonView = (props) => (
@@ -18,17 +18,8 @@ const SingleLessonView = (props) => (
   	      <span>{props.archived === "true" ? "Archived" : "Not Archived"}</span>
        </p>
 
-       <ReactPlayer
-          className={vidContainer}
-          url={props.videoURL}
-          youtubeConfig={{ preload: true }}
-//          Mark this lesson complete when the video finishes playing
-//          onEnded={() => this.setState({ props.markedComplete: true })}
-
-
-
-//  LIST: display (map through) all the lessons in this course for user Navigation
-
+      <VideoPlayerContainer
+        videoURL={props.videoURL}
        />
 
         <Link className="btn btn-success" to={`/EditLesson/${props.lessonId}`}> Edit </Link>
