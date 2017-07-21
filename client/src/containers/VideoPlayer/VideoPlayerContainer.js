@@ -19,18 +19,13 @@ class VideoPlayerContainer extends Component {
   stopVideo = () => {
     this.setState({url: null, playing: false})
   }
-  onClickFullscreen = () => {
-    screenfull.request(findDOMNode(this.refs.player))
-    this.setState({width: '100%', height: '100%'})
-// sample from Cody's project - how do we listen for the keycode - lines 26 & 28 below
-    const key = document.querySelector(`.key[data-key='${$e.keycode}']`)
-//    if e.keycode is 27 then setstate back to the proper width height
-    window.addEventListener('keydown', playSound);
+  onClickFullscreen = (event) => {
+    screenfull.request(findDOMNode(this.refs.player));
+    this.setState({width: '100%', height: '100%'});
+    if (event.keypress === 27) {
+      this.setState({width: '25%', height: '25%'});
+    }
   }
-
-  const keys = document.querySelectorAll('.key');
-      keys.forEach(key => key.addEventListener('transitionend', removeTransition))
-      window.addEventListener('keydown', playSound);
 
   render(){
     return (
@@ -45,7 +40,7 @@ class VideoPlayerContainer extends Component {
         <div className="form-group">
           <button className="btn btn-sm" onClick={this.playPause}>{this.state.playing ? 'Pause' : 'Play'}</button>
           <button className="btn btn-sm" onClick={this.stopVideo}>Stop</button>
-          <button className="btn btn-sm" onClick={this.onClickFullscreen}>Fullscreen</button>
+          <button className="btn btn-sm" onClick={(event) => this.onClickFullscreen(event)}>Fullscreen</button>
 
 
         </div>

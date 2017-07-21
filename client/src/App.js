@@ -8,6 +8,7 @@ import $ from 'jquery';
 class App extends Component {
   state = {
     user: undefined,
+    subscriberId: undefined,
     isAuthed: undefined,
     role: undefined
   }
@@ -23,7 +24,8 @@ getUser(){
     this.setState({
       user: response.user,
       isAuthed: response.isAuthed,
-      role: (response.isAuthed === true) ? response.user.local.role : null
+      role: (response.isAuthed === true) ? response.user.local.role : null,
+      subscriberId: (response.user.local.role === 'subscriber') ? response.user._id : null,
     })
   })
 }

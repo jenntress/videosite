@@ -19,5 +19,6 @@ module.exports = (app) => {
 	app.put('/api/lessons/:lesson_id', LessonRoutes.updateLesson);
 	app.delete('/api/lessons/:lesson_id', LessonRoutes.removeLesson);
 
-	app.post('/api/StripeGateway/PostPayment', StripeRoutes.cartCheckout)
+	app.post('/api/StripeGateway/PostPayment', StripeRoutes.cartCheckout);
+	app.post('/api/PaymentSuccess', StripeRoutes.addCourseToUser);
 }
