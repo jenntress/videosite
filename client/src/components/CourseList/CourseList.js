@@ -15,12 +15,13 @@ const CourseList = (props) => (
     <p>${item.price}</p>
     <br />
     <Link className="btn btn-default" to={`/SingleCourseView/${item._id}`}>More</Link>
+    {(props.role === "subscriber") ?
     <Checkout
       name={item.title}
       description={item.description}
       amount={item.price}
       course={item._id}
-    />
+    /> : null}
   </div>
 ))}
 </div>

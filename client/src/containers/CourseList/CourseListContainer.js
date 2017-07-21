@@ -6,8 +6,7 @@ import $ from 'jquery';
 
 class CourseListContainer extends Component {
   state = {
-    courses: undefined
-
+    courses: undefined,
   }
 
 componentDidMount = () => this.loadCourses()// react lifecycle component
@@ -25,7 +24,8 @@ componentDidMount = () => this.loadCourses()// react lifecycle component
   render() {
     return (
       <div>
-       {this.state.courses ?  <CourseList courses={this.state.courses}  /> : undefined}
+       {this.state.courses ?  <CourseList courses={this.state.courses}
+                                          role={this.props.role} /> : undefined}
       </div>
     )
   }

@@ -21,15 +21,19 @@
   display: inline;
 }
 
-.navLinkContainer a {
+.navLinkContainer a, button {
   margin: 5px;
   padding: 5px 5px;
 	color: #FFF;
   text-decoration: none;
+  background-color: inherit;
+  border: 0;
 }
-.navLinkContainer a:hover {
+.navLinkContainer a:hover, button:hover {
   margin: 5px;
   padding: 5px 5px;
 	color: #CCC;
   text-decoration: none;
+  background-color: inherit;
+  border: 0;
 }
